@@ -8,7 +8,7 @@ function HomeMenuItem({ menu }) {
         alt={menu.name}
         className="w-full h-48 object-cover"
       />
-      <div className="flex items-center justify-between p-4">
+      <div className="flex items-top justify-between p-4">
         <p className="text-sm font-medium text-gray-800">{menu.name}</p>
         <FaRegHeart className="text-gray-400 hover:text-red-500 cursor-pointer transition" />
       </div>
