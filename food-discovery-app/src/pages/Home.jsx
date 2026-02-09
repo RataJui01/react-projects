@@ -1,4 +1,4 @@
-import Header from "../ui/Header";
+import Header from "../ui/HomePageHeader";
 import SearchBar from "../ui/SearchBar";
 import HomeMenuList from "../ui/HomeMenuList";
 

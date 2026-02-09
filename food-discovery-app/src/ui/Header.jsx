@@ -1,14 +1,32 @@
-import { FaRegHeart } from "react-icons/fa";
+import { BsArrowLeft, BsBookmark } from "react-icons/bs";
 
-function Header(){
-    return <header className="flex justify-between items-center p-6 md:p-10">
-        <div className="brand-wrapper flex items-center gap-4">
-            <h1 className="font-accent text-3xl md:text-4xl">TasteTrial</h1>
-            <span className="font-primary bg-green-200 h-fit py-1 px-4 text-xs md:text-sm px-6">Food Discovery App</span>
-        </div>
+function Header({ headerText, numberOfElement = 3 }) {
+  return (
+    <header
+      className={`flex justify-between items-center p-6 gap-4 md:p-10 ${numberOfElement === 3 || "relative justify-center"}`}
+    >
+      <button
+        className={`${numberOfElement === 3 || "absolute"} left-5 sm:left-7 md:left-10 flex justify-center items-center gap-2 text-sm cursor-pointer md:text-lg`}
+      >
+        <BsArrowLeft />
+        Back
+      </button>
+      <h1
+        className={`${numberOfElement === 3 || "relative left-6"} text-wrap text-center text-2xl md:text-4xl md:left-0 xl:text-5xl`}
+      >
+        Vegan Saucy Ramen Noodles
+      </h1>
 
-        <button className="flex justify-center items-center gap-1 cursor-pointer text-sm md:text-lg"><FaRegHeart/>Favourite</button>
+      {numberOfElement === 3 && (
+        <button className="flex justify-center items-center gap-2 text-sm border-2 p-1 rounded-md cursor-pointer md:text-lg md:px-4">
+          <BsBookmark />
+          Saved
+        </button>
+      )}
+
+      {/* {numberOfElement === 3 && <button>Add to Saved</button>} */}
     </header>
+  );
 }
 
 export default Header;

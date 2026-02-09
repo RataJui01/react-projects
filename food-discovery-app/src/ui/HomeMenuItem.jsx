@@ -1,4 +1,4 @@
-import { FaRegHeart } from "react-icons/fa";
+import { BsBookmark } from "react-icons/bs";
 
 function HomeMenuItem({ menu }) {
   return (
@@ -10,7 +10,7 @@ function HomeMenuItem({ menu }) {
       />
       <div className="flex items-top justify-between p-4">
         <p className="text-sm font-medium text-gray-800">{menu.name}</p>
-        <FaRegHeart className="text-gray-400 hover:text-red-500 cursor-pointer transition" />
+        <BsBookmark className="text-gray-400 hover:text-red-500 cursor-pointer transition" />
       </div>
     </li>
   );

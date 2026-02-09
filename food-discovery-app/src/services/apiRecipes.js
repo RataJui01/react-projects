@@ -12,3 +12,14 @@ export async function getRandomRecipes(limit = 0) {
   const data = await res.json();
   return data.recipes;
 }
+
+export async function getSingleRecipe(mealName) {
+  const res = await fetch(`${API_URL}/search?q=${mealName}`);
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch a recipe");
+  }
+
+  const data = await res.json();
+  return data.recipes;
+}
