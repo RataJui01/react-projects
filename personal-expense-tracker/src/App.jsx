@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className="bg-amber-500 p-3">
-      <h1 className="p-3 text-6xl font-bold text-red-700">Hello React</h1>
-    </div>
-  );
+  return <h1>Hello React</h1>;
 }
 
 export default App;
