@@ -13,8 +13,6 @@ function App() {
     setItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }
 
-  console.log("$1,000,000".replace("$", "").replaceAll(",", ""));
-
   return (
     <div className="min-h-screen bg-[#F3F3F3] p-6 font-lexend">
       <header className="mx-auto mb-6 flex max-w-5xl items-center justify-between">
